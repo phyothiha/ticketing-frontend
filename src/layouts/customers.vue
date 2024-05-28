@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar elevation="0" border="thin">
       <template v-slot:prepend>
-        <v-app-bar-title class="pl-3">Dashboard</v-app-bar-title>
+        <v-app-bar-title class="pl-3">Dashboard | Customer</v-app-bar-title>
 
         <div class="px-1"></div>
 
@@ -46,8 +46,12 @@
     </v-navigation-drawer>
 
     <v-main>
-      <v-container class="pa-4 pa-sm-6 pa-md-8">
-        <router-view />
+      <v-container fluid class="pa-4 pa-sm-6 pa-md-8">
+        <v-row>
+          <v-col cols="8" offset="2">
+            <router-view />
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
   </v-app>

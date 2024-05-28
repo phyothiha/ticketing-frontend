@@ -16,4 +16,14 @@ export default createVuetify({
   theme: {
     defaultTheme: "light",
   },
+  defaults: {
+    VTextarea: {
+      variant: "outlined",
+      density: "compact",
+    },
+    VTextField: {
+      variant: "outlined",
+      density: "compact",
+    },
+  },
 });

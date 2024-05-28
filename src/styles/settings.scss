@@ -5,6 +5,10 @@
  */
 
 // https://vuetifyjs.com/features/sass-variables/`
-// @use 'vuetify/settings' with (
-//   $color-pack: false
-// );
+@use "vuetify/settings" with (
+  // https://vuetifyjs.com/api/v-card/#sass-card-actions-min-height
+  $card-actions-min-height: auto,
+
+  // https://vuetifyjs.com/api/v-data-table/#sass-data-table-footer-padding
+  $data-table-footer-padding: 10px 0 0 0
+);

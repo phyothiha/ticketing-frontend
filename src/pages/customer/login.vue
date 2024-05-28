@@ -5,36 +5,29 @@
         Customer Login
       </h1>
 
-      <AppCard>
-        <AppInputLabel>Username</AppInputLabel>
+      <v-form>
+        <AppCard>
+          <template #card-text>
+            <AppInputLabel>Username</AppInputLabel>
 
-        <v-text-field
-          density="compact"
-          placeholder="Enter your username"
-          variant="outlined"
-        ></v-text-field>
+            <v-text-field placeholder="Enter your username"></v-text-field>
 
-        <AppInputLabel>Password</AppInputLabel>
+            <AppInputLabel>Password</AppInputLabel>
 
-        <v-text-field
-          :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
-          :type="visible ? 'text' : 'password'"
-          density="compact"
-          placeholder="Enter your password"
-          variant="outlined"
-          @click:append-inner="visible = !visible"
-        ></v-text-field>
+            <v-text-field
+              :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
+              :type="visible ? 'text' : 'password'"
+              placeholder="Enter your password"
+              @click:append-inner="visible = !visible"
+            ></v-text-field>
+          </template>
 
-        <AppBtn
-          class="mt-5"
-          size="large"
-          variant="tonal"
-          block
-          to="/customer/dashboard"
-        >
-          Log In
-        </AppBtn>
-      </AppCard>
+          <template #card-actions>
+            <v-spacer></v-spacer>
+            <AppBtn to="/customer/dashboard"> Log In </AppBtn>
+          </template>
+        </AppCard>
+      </v-form>
 
       <div class="text-right mt-5">
         <AppBtn
