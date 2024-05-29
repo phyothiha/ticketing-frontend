@@ -8,7 +8,7 @@
 
 <template>
   <div>
-    <AppPageHeading> Add New Ticket </AppPageHeading>
+    <AppPageHeader heading="Add New Ticket" :breadcrumbs="breadcrumbs" />
 
     <v-form>
       <AppCard>
@@ -32,5 +32,15 @@
 </template>
 
 <script setup>
-//
+const breadcrumbs = [
+  {
+    title: "All Tickets",
+    disabled: false,
+    to: "/customer/tickets",
+  },
+  {
+    title: "Add Ticket",
+    disabled: true,
+  },
+];
 </script>

@@ -7,17 +7,34 @@
 </route>
 
 <template>
-  <div>
-    <AppPageHeading>Ticket ID Page</AppPageHeading>
+  <v-row>
+    <v-col cols="8">
+      <AppPageHeader :breadcrumbs="breadcrumbs" />
 
-    <AppCard>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-      necessitatibus odit totam fuga earum voluptate eum labore culpa? Possimus
-      dolore corrupti dolorum harum laudantium officiis sequi hic sed quae quos!
-    </AppCard>
-  </div>
+      <CustomerTicketSingleContent />
+
+      <CustomerTicketSingleReplyForm />
+
+      <!-- Ticket replies with pagination -->
+      <CustomerTicketSingleReplies v-for="index in 5" :key="index" />
+    </v-col>
+
+    <v-col cols="4">
+      <CustomerTicketSingleDetails />
+    </v-col>
+  </v-row>
 </template>
 
 <script setup>
-//
+const breadcrumbs = [
+  {
+    title: "All Tickets",
+    disabled: false,
+    to: "/customer/tickets",
+  },
+  {
+    title: "#3231",
+    disabled: true,
+  },
+];
 </script>

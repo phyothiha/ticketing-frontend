@@ -12,3 +12,7 @@
   // https://vuetifyjs.com/api/v-data-table/#sass-data-table-footer-padding
   $data-table-footer-padding: 10px 0 0 0
 );
+
+.v-field__input::placeholder {
+  font-size: 14px;
+}

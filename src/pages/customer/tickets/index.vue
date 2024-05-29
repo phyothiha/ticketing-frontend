@@ -8,7 +8,7 @@
 
 <template>
   <div>
-    <AppPageHeading> Tickets </AppPageHeading>
+    <AppPageHeader heading="Tickets" />
 
     <AppCard>
       <template #card-text>
